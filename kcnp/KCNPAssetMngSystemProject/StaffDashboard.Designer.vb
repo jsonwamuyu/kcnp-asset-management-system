@@ -26,7 +26,9 @@ Partial Class StaffDashboard
         Me.lblWelcomeStaff = New System.Windows.Forms.Label()
         Me.btnLogoutStaff = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblWelcomeStaff
@@ -53,12 +55,21 @@ Partial Class StaffDashboard
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.btnLogoutStaff)
         Me.Panel1.Controls.Add(Me.lblWelcomeStaff)
         Me.Panel1.Location = New System.Drawing.Point(148, 7)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(768, 392)
         Me.Panel1.TabIndex = 0
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(55, 50)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(207, 78)
+        Me.DataGridView1.TabIndex = 2
         '
         'StaffDashboard
         '
@@ -71,6 +82,7 @@ Partial Class StaffDashboard
         Me.Text = "StaffDashboard"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -78,4 +90,5 @@ Partial Class StaffDashboard
     Friend WithEvents lblWelcomeStaff As Label
     Friend WithEvents btnLogoutStaff As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
