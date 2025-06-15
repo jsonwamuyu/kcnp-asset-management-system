@@ -76,9 +76,7 @@
     <Compile Include="AddAssetForm.Designer.vb">
       <DependentUpon>AddAssetForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddAssetForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="AddAssetForm.vb" />
     <Compile Include="AdminDashboard.Designer.vb">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </Compile>
@@ -91,6 +89,11 @@
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KCNP_AssetsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KCNP_AssetsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
@@ -146,6 +149,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddAssetForm.resx">
+      <DependentUpon>AddAssetForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +178,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="KCNP_AssetsDataSet.xsc">
+      <DependentUpon>KCNP_AssetsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KCNP_AssetsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KCNP_AssetsDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KCNP_AssetsDataSet.xss">
+      <DependentUpon>KCNP_AssetsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -182,6 +199,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KCNP_Assets.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
