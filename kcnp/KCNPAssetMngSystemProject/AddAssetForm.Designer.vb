@@ -32,14 +32,14 @@ Partial Class AddAssetForm
         Me.descriptionLabelAddAsset = New System.Windows.Forms.Label()
         Me.assignedLabelAddAsset = New System.Windows.Forms.Label()
         Me.assigneeComboAddAsset = New System.Windows.Forms.ComboBox()
+        Me.KCNPAssetsDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KCNP_AssetsDataSet = New KCNPAssetMngSystemProject.KCNP_AssetsDataSet()
         Me.catogoryLabelAddAsset = New System.Windows.Forms.Label()
         Me.categoryInputAddAsset = New System.Windows.Forms.TextBox()
         Me.purchasedLabelAddAsset = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.KCNP_AssetsDataSet = New KCNPAssetMngSystemProject.KCNP_AssetsDataSet()
-        Me.KCNPAssetsDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.conditionLabelAddAsset = New System.Windows.Forms.Label()
         Me.conditionComboAddAsset = New System.Windows.Forms.ComboBox()
         Me.locationLabelAddAsset = New System.Windows.Forms.Label()
@@ -48,8 +48,8 @@ Partial Class AddAssetForm
         Me.statusLabelAddAsset = New System.Windows.Forms.Label()
         Me.statusComboAddAsset = New System.Windows.Forms.ComboBox()
         CType(Me.addAssetLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KCNP_AssetsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KCNPAssetsDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KCNP_AssetsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'addAssetLogo
@@ -95,7 +95,7 @@ Partial Class AddAssetForm
         'descriptionInputAddAsset
         '
         Me.descriptionInputAddAsset.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.descriptionInputAddAsset.Location = New System.Drawing.Point(89, 248)
+        Me.descriptionInputAddAsset.Location = New System.Drawing.Point(89, 252)
         Me.descriptionInputAddAsset.MaximumSize = New System.Drawing.Size(300, 32)
         Me.descriptionInputAddAsset.MinimumSize = New System.Drawing.Size(300, 32)
         Me.descriptionInputAddAsset.Multiline = True
@@ -106,7 +106,7 @@ Partial Class AddAssetForm
         'descriptionLabelAddAsset
         '
         Me.descriptionLabelAddAsset.AutoSize = True
-        Me.descriptionLabelAddAsset.Location = New System.Drawing.Point(89, 231)
+        Me.descriptionLabelAddAsset.Location = New System.Drawing.Point(87, 235)
         Me.descriptionLabelAddAsset.Name = "descriptionLabelAddAsset"
         Me.descriptionLabelAddAsset.Size = New System.Drawing.Size(63, 13)
         Me.descriptionLabelAddAsset.TabIndex = 16
@@ -115,7 +115,7 @@ Partial Class AddAssetForm
         'assignedLabelAddAsset
         '
         Me.assignedLabelAddAsset.AutoSize = True
-        Me.assignedLabelAddAsset.Location = New System.Drawing.Point(448, 405)
+        Me.assignedLabelAddAsset.Location = New System.Drawing.Point(448, 318)
         Me.assignedLabelAddAsset.Name = "assignedLabelAddAsset"
         Me.assignedLabelAddAsset.Size = New System.Drawing.Size(65, 13)
         Me.assignedLabelAddAsset.TabIndex = 18
@@ -129,17 +129,27 @@ Partial Class AddAssetForm
         Me.assigneeComboAddAsset.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.assigneeComboAddAsset.FormattingEnabled = True
         Me.assigneeComboAddAsset.ItemHeight = 13
-        Me.assigneeComboAddAsset.Location = New System.Drawing.Point(448, 420)
+        Me.assigneeComboAddAsset.Location = New System.Drawing.Point(448, 333)
         Me.assigneeComboAddAsset.MaximumSize = New System.Drawing.Size(300, 0)
         Me.assigneeComboAddAsset.MinimumSize = New System.Drawing.Size(300, 0)
         Me.assigneeComboAddAsset.Name = "assigneeComboAddAsset"
         Me.assigneeComboAddAsset.Size = New System.Drawing.Size(300, 21)
         Me.assigneeComboAddAsset.TabIndex = 19
         '
+        'KCNPAssetsDataSetBindingSource
+        '
+        Me.KCNPAssetsDataSetBindingSource.DataSource = Me.KCNP_AssetsDataSet
+        Me.KCNPAssetsDataSetBindingSource.Position = 0
+        '
+        'KCNP_AssetsDataSet
+        '
+        Me.KCNP_AssetsDataSet.DataSetName = "KCNP_AssetsDataSet"
+        Me.KCNP_AssetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'catogoryLabelAddAsset
         '
         Me.catogoryLabelAddAsset.AutoSize = True
-        Me.catogoryLabelAddAsset.Location = New System.Drawing.Point(90, 363)
+        Me.catogoryLabelAddAsset.Location = New System.Drawing.Point(90, 370)
         Me.catogoryLabelAddAsset.Name = "catogoryLabelAddAsset"
         Me.catogoryLabelAddAsset.Size = New System.Drawing.Size(52, 13)
         Me.catogoryLabelAddAsset.TabIndex = 20
@@ -148,7 +158,7 @@ Partial Class AddAssetForm
         'categoryInputAddAsset
         '
         Me.categoryInputAddAsset.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.categoryInputAddAsset.Location = New System.Drawing.Point(89, 378)
+        Me.categoryInputAddAsset.Location = New System.Drawing.Point(89, 385)
         Me.categoryInputAddAsset.MaximumSize = New System.Drawing.Size(300, 32)
         Me.categoryInputAddAsset.MinimumSize = New System.Drawing.Size(300, 32)
         Me.categoryInputAddAsset.Multiline = True
@@ -175,7 +185,7 @@ Partial Class AddAssetForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(87, 296)
+        Me.Label1.Location = New System.Drawing.Point(87, 300)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 25
@@ -184,7 +194,7 @@ Partial Class AddAssetForm
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(89, 312)
+        Me.TextBox1.Location = New System.Drawing.Point(89, 316)
         Me.TextBox1.MaximumSize = New System.Drawing.Size(300, 32)
         Me.TextBox1.MinimumSize = New System.Drawing.Size(300, 32)
         Me.TextBox1.Multiline = True
@@ -192,20 +202,10 @@ Partial Class AddAssetForm
         Me.TextBox1.Size = New System.Drawing.Size(300, 32)
         Me.TextBox1.TabIndex = 26
         '
-        'KCNP_AssetsDataSet
-        '
-        Me.KCNP_AssetsDataSet.DataSetName = "KCNP_AssetsDataSet"
-        Me.KCNP_AssetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'KCNPAssetsDataSetBindingSource
-        '
-        Me.KCNPAssetsDataSetBindingSource.DataSource = Me.KCNP_AssetsDataSet
-        Me.KCNPAssetsDataSetBindingSource.Position = 0
-        '
         'conditionLabelAddAsset
         '
         Me.conditionLabelAddAsset.AutoSize = True
-        Me.conditionLabelAddAsset.Location = New System.Drawing.Point(445, 286)
+        Me.conditionLabelAddAsset.Location = New System.Drawing.Point(445, 272)
         Me.conditionLabelAddAsset.Name = "conditionLabelAddAsset"
         Me.conditionLabelAddAsset.Size = New System.Drawing.Size(54, 13)
         Me.conditionLabelAddAsset.TabIndex = 27
@@ -215,7 +215,7 @@ Partial Class AddAssetForm
         '
         Me.conditionComboAddAsset.FormattingEnabled = True
         Me.conditionComboAddAsset.Items.AddRange(New Object() {"New", "Good", "Repair"})
-        Me.conditionComboAddAsset.Location = New System.Drawing.Point(448, 301)
+        Me.conditionComboAddAsset.Location = New System.Drawing.Point(448, 287)
         Me.conditionComboAddAsset.Name = "conditionComboAddAsset"
         Me.conditionComboAddAsset.Size = New System.Drawing.Size(300, 21)
         Me.conditionComboAddAsset.TabIndex = 28
@@ -223,7 +223,7 @@ Partial Class AddAssetForm
         'locationLabelAddAsset
         '
         Me.locationLabelAddAsset.AutoSize = True
-        Me.locationLabelAddAsset.Location = New System.Drawing.Point(445, 342)
+        Me.locationLabelAddAsset.Location = New System.Drawing.Point(445, 369)
         Me.locationLabelAddAsset.Name = "locationLabelAddAsset"
         Me.locationLabelAddAsset.Size = New System.Drawing.Size(51, 13)
         Me.locationLabelAddAsset.TabIndex = 29
@@ -232,11 +232,11 @@ Partial Class AddAssetForm
         'locationInputAddAsset
         '
         Me.locationInputAddAsset.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.locationInputAddAsset.Location = New System.Drawing.Point(448, 358)
+        Me.locationInputAddAsset.Location = New System.Drawing.Point(448, 385)
         Me.locationInputAddAsset.MaximumSize = New System.Drawing.Size(300, 32)
         Me.locationInputAddAsset.MinimumSize = New System.Drawing.Size(300, 32)
         Me.locationInputAddAsset.Name = "locationInputAddAsset"
-        Me.locationInputAddAsset.Size = New System.Drawing.Size(300, 26)
+        Me.locationInputAddAsset.Size = New System.Drawing.Size(300, 32)
         Me.locationInputAddAsset.TabIndex = 30
         '
         'addAssetButton
@@ -244,7 +244,7 @@ Partial Class AddAssetForm
         Me.addAssetButton.BackColor = System.Drawing.Color.BlueViolet
         Me.addAssetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addAssetButton.ForeColor = System.Drawing.Color.White
-        Me.addAssetButton.Location = New System.Drawing.Point(88, 444)
+        Me.addAssetButton.Location = New System.Drawing.Point(88, 452)
         Me.addAssetButton.Name = "addAssetButton"
         Me.addAssetButton.Size = New System.Drawing.Size(300, 36)
         Me.addAssetButton.TabIndex = 32
@@ -254,7 +254,7 @@ Partial Class AddAssetForm
         'statusLabelAddAsset
         '
         Me.statusLabelAddAsset.AutoSize = True
-        Me.statusLabelAddAsset.Location = New System.Drawing.Point(447, 228)
+        Me.statusLabelAddAsset.Location = New System.Drawing.Point(447, 221)
         Me.statusLabelAddAsset.Name = "statusLabelAddAsset"
         Me.statusLabelAddAsset.Size = New System.Drawing.Size(40, 13)
         Me.statusLabelAddAsset.TabIndex = 33
@@ -265,7 +265,7 @@ Partial Class AddAssetForm
         Me.statusComboAddAsset.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.statusComboAddAsset.FormattingEnabled = True
         Me.statusComboAddAsset.Items.AddRange(New Object() {"Available", "Assigned", "Maintenance"})
-        Me.statusComboAddAsset.Location = New System.Drawing.Point(448, 243)
+        Me.statusComboAddAsset.Location = New System.Drawing.Point(448, 236)
         Me.statusComboAddAsset.Name = "statusComboAddAsset"
         Me.statusComboAddAsset.Size = New System.Drawing.Size(300, 21)
         Me.statusComboAddAsset.TabIndex = 34
@@ -300,8 +300,8 @@ Partial Class AddAssetForm
         Me.Name = "AddAssetForm"
         Me.Text = "AddAssetForm"
         CType(Me.addAssetLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KCNP_AssetsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KCNPAssetsDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KCNP_AssetsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
