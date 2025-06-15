@@ -79,7 +79,7 @@ Partial Class LoginForm
         Me.usernameInputLogin.MaximumSize = New System.Drawing.Size(300, 32)
         Me.usernameInputLogin.MinimumSize = New System.Drawing.Size(300, 32)
         Me.usernameInputLogin.Name = "usernameInputLogin"
-        Me.usernameInputLogin.Size = New System.Drawing.Size(300, 32)
+        Me.usernameInputLogin.Size = New System.Drawing.Size(300, 26)
         Me.usernameInputLogin.TabIndex = 13
         '
         'haveNoAccountLabelLogin
@@ -135,7 +135,7 @@ Partial Class LoginForm
         Me.passwordInputLogin.MaximumSize = New System.Drawing.Size(300, 32)
         Me.passwordInputLogin.MinimumSize = New System.Drawing.Size(300, 32)
         Me.passwordInputLogin.Name = "passwordInputLogin"
-        Me.passwordInputLogin.Size = New System.Drawing.Size(300, 32)
+        Me.passwordInputLogin.Size = New System.Drawing.Size(300, 26)
         Me.passwordInputLogin.TabIndex = 8
         Me.passwordInputLogin.UseSystemPasswordChar = True
         '

@@ -4,7 +4,7 @@ Imports System.Text
 
 Public Class SignupForm
     ' ✅ Database connection
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\HomePC\Desktop\KCNPAssetManagementSystem\FinalYearKCNPASSETSMNGSYSTEM\KCNP_Assets.accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\KCNPAssetMngSystem\kcnp\KCNP_Assets.accdb")
 
     ' ✅ Form Load: Center window
     Private Sub SignupForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

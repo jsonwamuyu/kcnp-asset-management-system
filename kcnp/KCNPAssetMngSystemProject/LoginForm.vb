@@ -3,7 +3,7 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Public Class LoginForm
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\HomePC\Desktop\KCNPAssetManagementSystem\FinalYearKCNPASSETSMNGSYSTEM\KCNP_Assets.accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\KCNPAssetMngSystem\kcnp\KCNP_Assets.accdb")
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.StartPosition = FormStartPosition.CenterScreen
@@ -78,5 +78,9 @@ Public Class LoginForm
         Finally
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

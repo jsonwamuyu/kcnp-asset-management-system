@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class StaffDashboard
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\HomePC\Desktop\KCNPAssetManagementSystem\FinalYearKCNPASSETSMNGSYSTEM\KCNP_Assets.accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=B:\KCNPAssetMngSystem\kcnp\KCNP_Assets.accdb")
 
     Private Sub StaffDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.StartPosition = FormStartPosition.CenterScreen

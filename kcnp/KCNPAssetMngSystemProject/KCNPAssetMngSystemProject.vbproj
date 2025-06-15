@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAssetForm.Designer.vb">
+      <DependentUpon>AddAssetForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddAssetForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminDashboard.Designer.vb">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </Compile>
@@ -96,6 +102,18 @@
       <DependentUpon>MaintenanceDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="MaintenanceDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAssetRequestsForm.Designer.vb">
+      <DependentUpon>ManageAssetRequestsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAssetRequestsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsersForm.Designer.vb">
+      <DependentUpon>ManageUsersForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsersForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
