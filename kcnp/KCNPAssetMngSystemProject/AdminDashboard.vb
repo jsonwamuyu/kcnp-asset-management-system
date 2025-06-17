@@ -10,7 +10,7 @@
 
     ' Button1 - Add Asset
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim addAssetForm As New AddAssetForm()
+        Dim addAssetForm As New AddAsset()
         addAssetForm.ShowDialog()
     End Sub
 

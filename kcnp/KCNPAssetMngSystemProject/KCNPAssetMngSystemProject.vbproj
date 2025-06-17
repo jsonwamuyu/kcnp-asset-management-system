@@ -73,10 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAssetForm.Designer.vb">
-      <DependentUpon>AddAssetForm.vb</DependentUpon>
+    <Compile Include="AddAsset.Designer.vb">
+      <DependentUpon>AddAsset.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddAssetForm.vb" />
+    <Compile Include="AddAsset.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminDashboard.Designer.vb">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </Compile>
@@ -149,8 +151,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddAssetForm.resx">
-      <DependentUpon>AddAssetForm.vb</DependentUpon>
+    <EmbeddedResource Include="AddAsset.resx">
+      <DependentUpon>AddAsset.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
@@ -163,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MaintenanceDashboard.resx">
       <DependentUpon>MaintenanceDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAssetRequestsForm.resx">
+      <DependentUpon>ManageAssetRequestsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsersForm.resx">
+      <DependentUpon>ManageUsersForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
