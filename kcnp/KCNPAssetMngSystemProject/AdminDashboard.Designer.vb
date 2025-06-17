@@ -31,7 +31,9 @@ Partial Class AdminDashboard
         Me.btnLogoutStaff = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.AssetsGrid = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AssetsGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button3
@@ -113,17 +115,29 @@ Partial Class AdminDashboard
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(21, 169)
+        Me.Label3.Location = New System.Drawing.Point(21, 193)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(194, 25)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "LIST OF ASSETS"
+        '
+        'AssetsGrid
+        '
+        Me.AssetsGrid.AllowUserToAddRows = False
+        Me.AssetsGrid.BackgroundColor = System.Drawing.Color.White
+        Me.AssetsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.AssetsGrid.Location = New System.Drawing.Point(24, 229)
+        Me.AssetsGrid.Name = "AssetsGrid"
+        Me.AssetsGrid.ReadOnly = True
+        Me.AssetsGrid.Size = New System.Drawing.Size(712, 263)
+        Me.AssetsGrid.TabIndex = 18
         '
         'AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 500)
+        Me.Controls.Add(Me.AssetsGrid)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnLogoutStaff)
@@ -135,6 +149,7 @@ Partial Class AdminDashboard
         Me.Name = "AdminDashboard"
         Me.Text = "AdminDashboard"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AssetsGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +163,5 @@ Partial Class AdminDashboard
     Friend WithEvents btnLogoutStaff As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents AssetsGrid As DataGridView
 End Class
