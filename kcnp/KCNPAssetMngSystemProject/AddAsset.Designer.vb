@@ -24,7 +24,6 @@ Partial Class AddAsset
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddAsset))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.DescriptionInput = New System.Windows.Forms.TextBox()
         Me.AddAssetHeader = New System.Windows.Forms.Label()
         Me.AssetNameLabel = New System.Windows.Forms.Label()
         Me.LocationLabel = New System.Windows.Forms.Label()
@@ -35,43 +34,33 @@ Partial Class AddAsset
         Me.PurchaseDateLabel = New System.Windows.Forms.Label()
         Me.DescriptionLabel = New System.Windows.Forms.Label()
         Me.PurchaseDate = New System.Windows.Forms.DateTimePicker()
+        Me.DescriptionInput = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(233, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(537, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(304, 79)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'DescriptionInput
-        '
-        Me.DescriptionInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DescriptionInput.Location = New System.Drawing.Point(60, 256)
-        Me.DescriptionInput.MaximumSize = New System.Drawing.Size(300, 32)
-        Me.DescriptionInput.MinimumSize = New System.Drawing.Size(300, 32)
-        Me.DescriptionInput.Multiline = True
-        Me.DescriptionInput.Name = "DescriptionInput"
-        Me.DescriptionInput.Size = New System.Drawing.Size(300, 32)
-        Me.DescriptionInput.TabIndex = 30
-        '
         'AddAssetHeader
         '
         Me.AddAssetHeader.AutoSize = True
-        Me.AddAssetHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddAssetHeader.Location = New System.Drawing.Point(55, 117)
+        Me.AddAssetHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddAssetHeader.Location = New System.Drawing.Point(159, 145)
         Me.AddAssetHeader.Name = "AddAssetHeader"
-        Me.AddAssetHeader.Size = New System.Drawing.Size(160, 24)
+        Me.AddAssetHeader.Size = New System.Drawing.Size(178, 25)
         Me.AddAssetHeader.TabIndex = 20
         Me.AddAssetHeader.Text = "ADD AN ASSET"
         '
         'AssetNameLabel
         '
         Me.AssetNameLabel.AutoSize = True
-        Me.AssetNameLabel.Location = New System.Drawing.Point(56, 170)
+        Me.AssetNameLabel.Location = New System.Drawing.Point(160, 213)
         Me.AssetNameLabel.Name = "AssetNameLabel"
         Me.AssetNameLabel.Size = New System.Drawing.Size(67, 13)
         Me.AssetNameLabel.TabIndex = 21
@@ -80,7 +69,7 @@ Partial Class AddAsset
         'LocationLabel
         '
         Me.LocationLabel.AutoSize = True
-        Me.LocationLabel.Location = New System.Drawing.Point(434, 242)
+        Me.LocationLabel.Location = New System.Drawing.Point(538, 285)
         Me.LocationLabel.Name = "LocationLabel"
         Me.LocationLabel.Size = New System.Drawing.Size(51, 13)
         Me.LocationLabel.TabIndex = 22
@@ -89,11 +78,11 @@ Partial Class AddAsset
         'LocationInput
         '
         Me.LocationInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LocationInput.Location = New System.Drawing.Point(437, 256)
+        Me.LocationInput.Location = New System.Drawing.Point(541, 299)
         Me.LocationInput.MaximumSize = New System.Drawing.Size(300, 32)
         Me.LocationInput.MinimumSize = New System.Drawing.Size(300, 32)
         Me.LocationInput.Name = "LocationInput"
-        Me.LocationInput.Size = New System.Drawing.Size(300, 26)
+        Me.LocationInput.Size = New System.Drawing.Size(300, 32)
         Me.LocationInput.TabIndex = 23
         '
         'AddAssetBtn
@@ -102,7 +91,7 @@ Partial Class AddAsset
         Me.AddAssetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddAssetBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddAssetBtn.ForeColor = System.Drawing.Color.White
-        Me.AddAssetBtn.Location = New System.Drawing.Point(247, 365)
+        Me.AddAssetBtn.Location = New System.Drawing.Point(351, 426)
         Me.AddAssetBtn.Name = "AddAssetBtn"
         Me.AddAssetBtn.Size = New System.Drawing.Size(302, 30)
         Me.AddAssetBtn.TabIndex = 24
@@ -112,20 +101,23 @@ Partial Class AddAsset
         'AssetNameInput
         '
         Me.AssetNameInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AssetNameInput.Location = New System.Drawing.Point(59, 186)
+        Me.AssetNameInput.Location = New System.Drawing.Point(163, 229)
         Me.AssetNameInput.MaximumSize = New System.Drawing.Size(300, 32)
         Me.AssetNameInput.MinimumSize = New System.Drawing.Size(300, 32)
         Me.AssetNameInput.Name = "AssetNameInput"
-        Me.AssetNameInput.Size = New System.Drawing.Size(300, 26)
+        Me.AssetNameInput.Size = New System.Drawing.Size(300, 32)
         Me.AssetNameInput.TabIndex = 25
         '
         'BackAdminDashboard
         '
         Me.BackAdminDashboard.AutoSize = True
+        Me.BackAdminDashboard.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BackAdminDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackAdminDashboard.ForeColor = System.Drawing.Color.Green
         Me.BackAdminDashboard.LinkColor = System.Drawing.Color.Gray
-        Me.BackAdminDashboard.Location = New System.Drawing.Point(56, 57)
+        Me.BackAdminDashboard.Location = New System.Drawing.Point(160, 12)
         Me.BackAdminDashboard.Name = "BackAdminDashboard"
-        Me.BackAdminDashboard.Size = New System.Drawing.Size(99, 13)
+        Me.BackAdminDashboard.Size = New System.Drawing.Size(163, 20)
         Me.BackAdminDashboard.TabIndex = 26
         Me.BackAdminDashboard.TabStop = True
         Me.BackAdminDashboard.Text = "Back to Dashboard"
@@ -133,7 +125,7 @@ Partial Class AddAsset
         'PurchaseDateLabel
         '
         Me.PurchaseDateLabel.AutoSize = True
-        Me.PurchaseDateLabel.Location = New System.Drawing.Point(434, 170)
+        Me.PurchaseDateLabel.Location = New System.Drawing.Point(538, 213)
         Me.PurchaseDateLabel.Name = "PurchaseDateLabel"
         Me.PurchaseDateLabel.Size = New System.Drawing.Size(81, 13)
         Me.PurchaseDateLabel.TabIndex = 27
@@ -142,7 +134,7 @@ Partial Class AddAsset
         'DescriptionLabel
         '
         Me.DescriptionLabel.AutoSize = True
-        Me.DescriptionLabel.Location = New System.Drawing.Point(56, 242)
+        Me.DescriptionLabel.Location = New System.Drawing.Point(160, 285)
         Me.DescriptionLabel.Name = "DescriptionLabel"
         Me.DescriptionLabel.Size = New System.Drawing.Size(63, 13)
         Me.DescriptionLabel.TabIndex = 29
@@ -150,18 +142,26 @@ Partial Class AddAsset
         '
         'PurchaseDate
         '
-        Me.PurchaseDate.Location = New System.Drawing.Point(437, 190)
+        Me.PurchaseDate.Location = New System.Drawing.Point(541, 233)
         Me.PurchaseDate.Name = "PurchaseDate"
         Me.PurchaseDate.Size = New System.Drawing.Size(300, 20)
         Me.PurchaseDate.TabIndex = 31
+        '
+        'DescriptionInput
+        '
+        Me.DescriptionInput.Location = New System.Drawing.Point(164, 296)
+        Me.DescriptionInput.Multiline = True
+        Me.DescriptionInput.Name = "DescriptionInput"
+        Me.DescriptionInput.Size = New System.Drawing.Size(299, 55)
+        Me.DescriptionInput.TabIndex = 32
         '
         'AddAsset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.PurchaseDate)
+        Me.ClientSize = New System.Drawing.Size(974, 496)
         Me.Controls.Add(Me.DescriptionInput)
+        Me.Controls.Add(Me.PurchaseDate)
         Me.Controls.Add(Me.DescriptionLabel)
         Me.Controls.Add(Me.PurchaseDateLabel)
         Me.Controls.Add(Me.BackAdminDashboard)
@@ -181,7 +181,6 @@ Partial Class AddAsset
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DescriptionInput As TextBox
     Friend WithEvents AddAssetHeader As Label
     Friend WithEvents AssetNameLabel As Label
     Friend WithEvents LocationLabel As Label
@@ -192,4 +191,5 @@ Partial Class AddAsset
     Friend WithEvents PurchaseDateLabel As Label
     Friend WithEvents DescriptionLabel As Label
     Friend WithEvents PurchaseDate As DateTimePicker
+    Friend WithEvents DescriptionInput As TextBox
 End Class

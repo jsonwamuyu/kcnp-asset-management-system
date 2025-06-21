@@ -56,18 +56,20 @@ Partial Class LoginForm
         Me.Panel1.Controls.Add(Me.usernameLabelLogin)
         Me.Panel1.Controls.Add(Me.loginHeader)
         Me.Panel1.Controls.Add(Me.loginLogo)
-        Me.Panel1.Location = New System.Drawing.Point(101, 5)
+        Me.Panel1.Location = New System.Drawing.Point(74, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(657, 445)
+        Me.Panel1.Size = New System.Drawing.Size(819, 445)
         Me.Panel1.TabIndex = 0
         '
         'backHomeLogin
         '
         Me.backHomeLogin.AutoSize = True
+        Me.backHomeLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.backHomeLogin.ForeColor = System.Drawing.Color.Green
         Me.backHomeLogin.LinkColor = System.Drawing.Color.Gray
-        Me.backHomeLogin.Location = New System.Drawing.Point(169, 99)
+        Me.backHomeLogin.Location = New System.Drawing.Point(60, 20)
         Me.backHomeLogin.Name = "backHomeLogin"
-        Me.backHomeLogin.Size = New System.Drawing.Size(63, 13)
+        Me.backHomeLogin.Size = New System.Drawing.Size(101, 20)
         Me.backHomeLogin.TabIndex = 14
         Me.backHomeLogin.TabStop = True
         Me.backHomeLogin.Text = "Back Home"
@@ -75,17 +77,17 @@ Partial Class LoginForm
         'usernameInputLogin
         '
         Me.usernameInputLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.usernameInputLogin.Location = New System.Drawing.Point(174, 206)
+        Me.usernameInputLogin.Location = New System.Drawing.Point(63, 234)
         Me.usernameInputLogin.MaximumSize = New System.Drawing.Size(300, 32)
         Me.usernameInputLogin.MinimumSize = New System.Drawing.Size(300, 32)
         Me.usernameInputLogin.Name = "usernameInputLogin"
-        Me.usernameInputLogin.Size = New System.Drawing.Size(300, 26)
+        Me.usernameInputLogin.Size = New System.Drawing.Size(300, 32)
         Me.usernameInputLogin.TabIndex = 13
         '
         'haveNoAccountLabelLogin
         '
         Me.haveNoAccountLabelLogin.AutoSize = True
-        Me.haveNoAccountLabelLogin.Location = New System.Drawing.Point(338, 392)
+        Me.haveNoAccountLabelLogin.Location = New System.Drawing.Point(615, 331)
         Me.haveNoAccountLabelLogin.Name = "haveNoAccountLabelLogin"
         Me.haveNoAccountLabelLogin.Size = New System.Drawing.Size(96, 13)
         Me.haveNoAccountLabelLogin.TabIndex = 12
@@ -96,7 +98,7 @@ Partial Class LoginForm
         Me.signupLinkLogin.AutoSize = True
         Me.signupLinkLogin.ForeColor = System.Drawing.Color.Green
         Me.signupLinkLogin.LinkColor = System.Drawing.Color.Green
-        Me.signupLinkLogin.Location = New System.Drawing.Point(434, 392)
+        Me.signupLinkLogin.Location = New System.Drawing.Point(711, 331)
         Me.signupLinkLogin.Name = "signupLinkLogin"
         Me.signupLinkLogin.Size = New System.Drawing.Size(40, 13)
         Me.signupLinkLogin.TabIndex = 11
@@ -109,7 +111,7 @@ Partial Class LoginForm
         Me.btnLoginSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLoginSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLoginSubmit.ForeColor = System.Drawing.Color.White
-        Me.btnLoginSubmit.Location = New System.Drawing.Point(172, 326)
+        Me.btnLoginSubmit.Location = New System.Drawing.Point(63, 322)
         Me.btnLoginSubmit.Name = "btnLoginSubmit"
         Me.btnLoginSubmit.Size = New System.Drawing.Size(302, 30)
         Me.btnLoginSubmit.TabIndex = 10
@@ -121,7 +123,7 @@ Partial Class LoginForm
         Me.forgotPasswordLink.AutoSize = True
         Me.forgotPasswordLink.ForeColor = System.Drawing.Color.Green
         Me.forgotPasswordLink.LinkColor = System.Drawing.Color.Green
-        Me.forgotPasswordLink.Location = New System.Drawing.Point(169, 392)
+        Me.forgotPasswordLink.Location = New System.Drawing.Point(454, 331)
         Me.forgotPasswordLink.Name = "forgotPasswordLink"
         Me.forgotPasswordLink.Size = New System.Drawing.Size(92, 13)
         Me.forgotPasswordLink.TabIndex = 9
@@ -131,18 +133,18 @@ Partial Class LoginForm
         'passwordInputLogin
         '
         Me.passwordInputLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passwordInputLogin.Location = New System.Drawing.Point(172, 272)
+        Me.passwordInputLogin.Location = New System.Drawing.Point(457, 234)
         Me.passwordInputLogin.MaximumSize = New System.Drawing.Size(300, 32)
         Me.passwordInputLogin.MinimumSize = New System.Drawing.Size(300, 32)
         Me.passwordInputLogin.Name = "passwordInputLogin"
-        Me.passwordInputLogin.Size = New System.Drawing.Size(300, 26)
+        Me.passwordInputLogin.Size = New System.Drawing.Size(300, 32)
         Me.passwordInputLogin.TabIndex = 8
         Me.passwordInputLogin.UseSystemPasswordChar = True
         '
         'passwordLabelLogin
         '
         Me.passwordLabelLogin.AutoSize = True
-        Me.passwordLabelLogin.Location = New System.Drawing.Point(169, 256)
+        Me.passwordLabelLogin.Location = New System.Drawing.Point(454, 203)
         Me.passwordLabelLogin.Name = "passwordLabelLogin"
         Me.passwordLabelLogin.Size = New System.Drawing.Size(56, 13)
         Me.passwordLabelLogin.TabIndex = 7
@@ -151,7 +153,7 @@ Partial Class LoginForm
         'usernameLabelLogin
         '
         Me.usernameLabelLogin.AutoSize = True
-        Me.usernameLabelLogin.Location = New System.Drawing.Point(169, 190)
+        Me.usernameLabelLogin.Location = New System.Drawing.Point(60, 203)
         Me.usernameLabelLogin.Name = "usernameLabelLogin"
         Me.usernameLabelLogin.Size = New System.Drawing.Size(58, 13)
         Me.usernameLabelLogin.TabIndex = 4
@@ -160,10 +162,10 @@ Partial Class LoginForm
         'loginHeader
         '
         Me.loginHeader.AutoSize = True
-        Me.loginHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loginHeader.Location = New System.Drawing.Point(168, 143)
+        Me.loginHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loginHeader.Location = New System.Drawing.Point(59, 126)
         Me.loginHeader.Name = "loginHeader"
-        Me.loginHeader.Size = New System.Drawing.Size(72, 24)
+        Me.loginHeader.Size = New System.Drawing.Size(81, 25)
         Me.loginHeader.TabIndex = 3
         Me.loginHeader.Text = "LOGIN"
         '
@@ -171,7 +173,7 @@ Partial Class LoginForm
         '
         Me.loginLogo.BackgroundImage = CType(resources.GetObject("loginLogo.BackgroundImage"), System.Drawing.Image)
         Me.loginLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.loginLogo.Location = New System.Drawing.Point(172, 0)
+        Me.loginLogo.Location = New System.Drawing.Point(457, 6)
         Me.loginLogo.Name = "loginLogo"
         Me.loginLogo.Size = New System.Drawing.Size(300, 79)
         Me.loginLogo.TabIndex = 2
@@ -187,7 +189,7 @@ Partial Class LoginForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(800, 485)
+        Me.ClientSize = New System.Drawing.Size(970, 485)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "LoginForm"
         Me.Text = "LoginForm"

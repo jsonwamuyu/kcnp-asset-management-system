@@ -68,7 +68,7 @@ Public Class AddAsset
     Private Sub LocationInput_TextChanged(sender As Object, e As EventArgs) Handles LocationInput.TextChanged
     End Sub
 
-    Private Sub DescriptionInput_TextChanged(sender As Object, e As EventArgs) Handles DescriptionInput.TextChanged
+    Private Sub DescriptionInput_TextChanged(sender As Object, e As EventArgs)
     End Sub
 
     Private Sub PurchaseDate_ValueChanged(sender As Object, e As EventArgs) Handles PurchaseDate.ValueChanged
