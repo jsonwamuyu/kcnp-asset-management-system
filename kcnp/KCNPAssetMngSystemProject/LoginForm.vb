@@ -41,16 +41,25 @@ Public Class LoginForm
         Try
             conn.Open()
 
-            Dim cmd As New OleDbCommand("SELECT Role FROM Users WHERE Username = ? AND UserPassword = ?", conn)
-            cmd.Parameters.AddWithValue("?", usernameInputLogin.Text)
-            cmd.Parameters.AddWithValue("?", hashedPassword)
+            ' 🔍 Query for UserID and Role
+            Dim cmd As New OleDbCommand("SELECT UserID, Role FROM Users WHERE Username = ? AND UserPassword = ?", conn)
+            cmd.Parameters.Add(New OleDbParameter With {
+    .OleDbType = OleDbType.VarWChar,
+    .Value = usernameInputLogin.Text.Trim()
+})
+            cmd.Parameters.Add(New OleDbParameter With {
+    .OleDbType = OleDbType.VarWChar,
+    .Value = hashedPassword
+})
 
-            Dim role As Object = cmd.ExecuteScalar()
 
-            If role IsNot Nothing Then
+            Dim reader As OleDbDataReader = cmd.ExecuteReader()
+
+            If reader.Read() Then
                 ' ✅ Store session info
                 Session.LoggedInUsername = usernameInputLogin.Text
-                Session.LoggedInRole = role.ToString()
+                Session.LoggedInRole = reader("Role").ToString()
+                Session.LoggedInUserID = CInt(reader("UserID"))
 
                 ' ✅ Redirect to appropriate dashboard
                 Select Case Session.LoggedInRole
@@ -78,9 +87,5 @@ Public Class LoginForm
         Finally
             conn.Close()
         End Try
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
     End Sub
 End Class
