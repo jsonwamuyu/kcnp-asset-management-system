@@ -96,11 +96,11 @@ Public Class ManageUsersForm
             Next
 
             MessageBox.Show("Roles updated successfully.")
-            LoadUsers()
         Catch ex As Exception
             MessageBox.Show("Error saving roles: " & ex.Message)
         Finally
-            conn.Close()
+            If conn.State = ConnectionState.Open Then conn.Close()
+            LoadUsers() '
         End Try
     End Sub
 

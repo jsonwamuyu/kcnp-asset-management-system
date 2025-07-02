@@ -41,17 +41,16 @@ Public Class StaffDashboard
         login.Show()
     End Sub
 
-    ' Handle request asset button click
     Private Sub RequestAssetBtn_Click(sender As Object, e As EventArgs) Handles RequestAssetBtn.Click
         If AvailableAssetsGrid.SelectedRows.Count = 0 Then
             MessageBox.Show("Please select an asset to request.")
             Return
         End If
 
-        ' Ensure valid user ID
-        If Not IsNumeric(Session.LoggedInUserID) Then
-            MessageBox.Show("Logged in user ID is missing or invalid.")
-            Exit Sub
+        ' Validate logged in user ID
+        If Not IsNumeric(Session.LoggedInUserID) OrElse Session.LoggedInUserID <= 0 Then
+            MessageBox.Show("Invalid user session.")
+            Return
         End If
 
         Dim selectedAssetID As Integer = CInt(AvailableAssetsGrid.SelectedRows(0).Cells("AssetID").Value)
@@ -59,31 +58,35 @@ Public Class StaffDashboard
         Try
             conn.Open()
 
-            ' Check if user has already requested this asset and it's still pending
-            Dim checkCmd As New OleDbCommand("SELECT COUNT(*) FROM Assignments WHERE AssetID = ? AND UserID = ? AND Status = 'Pending'", conn)
-            checkCmd.Parameters.AddWithValue("?", CInt(selectedAssetID))
-            checkCmd.Parameters.AddWithValue("?", CInt(Session.LoggedInUserID))
+            ' Ensure the parameter order matches the query EXACTLY
+            Dim checkQuery As String = "SELECT COUNT(*) FROM Assignments WHERE AssetID = ? AND UserID = ? AND Status = ?"
+            Dim checkCmd As New OleDbCommand(checkQuery, conn)
+            checkCmd.Parameters.Add(New OleDbParameter With {.OleDbType = OleDbType.Integer, .Value = selectedAssetID})
+            checkCmd.Parameters.Add(New OleDbParameter With {.OleDbType = OleDbType.Integer, .Value = Session.LoggedInUserID})
+            checkCmd.Parameters.Add(New OleDbParameter With {.OleDbType = OleDbType.VarChar, .Value = "Pending"})
 
             Dim count As Integer = CInt(checkCmd.ExecuteScalar())
             If count > 0 Then
                 MessageBox.Show("You have already requested this asset and it is still pending.")
-                Exit Sub
+                Return
             End If
 
-            ' Insert asset request into Assignments table
-            Dim insertCmd As New OleDbCommand("INSERT INTO Assignments (UserID, AssetID, RequestDate, Status) VALUES (?, ?, ?, ?)", conn)
-            insertCmd.Parameters.AddWithValue("?", CInt(Session.LoggedInUserID))
-            insertCmd.Parameters.AddWithValue("?", CInt(selectedAssetID))
-            insertCmd.Parameters.AddWithValue("?", CDate(DateTime.Now))
-            insertCmd.Parameters.AddWithValue("?", "Pending")
+            ' Insert asset request
+            Dim insertQuery As String = "INSERT INTO Assignments (UserID, AssetID, RequestDate, Status) VALUES (?, ?, ?, ?)"
+            Dim insertCmd As New OleDbCommand(insertQuery, conn)
+            insertCmd.Parameters.Add(New OleDbParameter With {.OleDbType = OleDbType.Integer, .Value = Session.LoggedInUserID})
+            insertCmd.Parameters.Add(New OleDbParameter With {.OleDbType = OleDbType.Integer, .Value = selectedAssetID})
+            insertCmd.Parameters.Add(New OleDbParameter With {.OleDbType = OleDbType.Date, .Value = DateTime.Now})
+            insertCmd.Parameters.Add(New OleDbParameter With {.OleDbType = OleDbType.VarChar, .Value = "Pending"})
 
             insertCmd.ExecuteNonQuery()
             MessageBox.Show("Asset request submitted successfully.")
-
         Catch ex As Exception
             MessageBox.Show("Error submitting request: " & ex.Message)
         Finally
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
     End Sub
+
+
 End Class
